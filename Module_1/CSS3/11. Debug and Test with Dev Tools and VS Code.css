@@ -1,0 +1,58 @@
+Some users are experiencing layout problems when viewing your site on smaller devices. Your role is to diagnose and fix these issues using Chrome DevTools and Visual Studio Code.
+
+ Goal
+
+Leverage browser developer tools and editor capabilities to identify, test, and resolve CSS-related layout problems.
+
+ Steps to Follow
+
+1. Simulate Various Screen Sizes Using Chrome's Device Toolbar
+
+Instructions:
+
+ Open your web page in Google Chrome.
+ Open DevTools by pressing F12 or right-clicking and selecting Inspect.
+ Click the Toggle device toolbar icon (or press Ctrl + Shift + M).
+ Choose from preset devices like iPhone X or iPad, or define custom screen dimensions.
+ Watch how the layout adapts in real-time across different viewports.
+
+
+ 2. Examine CSS Rules and Make Live Adjustments
+
+Instructions:
+
+ Click the element selector icon (top-left of DevTools).
+ Select any element causing layout issues (e.g., `.eventCard`, `nav`).
+ Go to the Styles tab to inspect all CSS rules currently applied.
+ Modify properties like `flex-direction`, `width`, or `font-size` directly in DevTools to test fixes.
+ Use the Computed tab to understand the box model, including margin, padding, border, and element size.
+
+Example:
+
+```css
+.nav-menu {
+    flex-direction: column; / Try switching from row /
+}
+```
+
+3. Confirm That Your CSS File Is Being Loaded Properly
+
+Instructions:
+
+ Open the Network tab in Chrome DevTools.
+ Refresh the page (Ctrl + R).
+ Look for your CSS file (e.g., `styles.css`) in the resource list.
+ Check the status code:
+
+   200 OK → CSS is loading correctly.
+   404 Not Found → CSS path might be incorrect. Double-check your `<link rel="stylesheet">`.
+
+
+
+ Bonus Tips for VS Code Users
+
+ Install the Live Server extension for quick previews and auto-refresh.
+ Format your CSS using Shift + Alt + F or install Prettier for cleaner code.
+ Use Emmet shortcuts to speed up coding (e.g., `m10` becomes `margin: 10px;`).
+
+ 
